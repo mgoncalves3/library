@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Odin | Library</title>
+</head>
+<body>
+  <header>
+    <h1>Odin | Library</h1>
+  </header>
+  <main>
+    <div class="library-content">
+      <table id="library-table">
+        <thead>
+          <th>Title</th>
+          <th>Author</th>
+          <th># Pages</th>
+          <th>Read this book?</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="library-content">
+        </tbody>
+      </table>
+    </div>
+    <button type="button" id="new-book-btn">New Book</button>
+  </main>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p>Add a book to your library</p>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="post">
+          <fieldset>
+            <label for="book-title">Book title</label>
+            <input type="text" name="title" id="book-title" data-title="title" required>
+            <label for="book-author">Author</label>
+            <input type="text" name="author" id="book-author" data-author="author" required>
+            <label for="book-pages">Number of pages</label>
+            <input type="number" name="pages" id="book-pages" data-pages="pages" required>
+            <label for="read-status">Have you read the book?</label>
+            <select name="read-status" id="read-status">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            </select>
+          </fieldset>
+          <button type="button" id="add-confirm-btn">Add to Library</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
