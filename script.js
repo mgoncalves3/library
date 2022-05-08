@@ -1,15 +1,30 @@
 // Book object constructor
-function Book(title, author, pages, status) {
-  (this.title = title), (this.author = author);
+// function Book(title, author, pages, status) {
+//   (this.title = title), (this.author = author);
+//   this.pages = pages;
+//   this.status = status;
+// }
+
+// // Set a global function for all Book objects
+// Book.prototype.info = function () {
+//   return `${this.title} by ${this.author}, ${this.pages}. Did you read it? ${
+//     this.status.toLowerCase().charAt(0).toUpperCase() + this.status.slice(1)
+//   }.`;
+// };
+
+class Book {
+  constructor (title, author, pages, status) {
+  this.title = title;
+  this.author = author;
   this.pages = pages;
   this.status = status;
-}
+  }
 
-// Set a global function for all Book objects
-Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages}. Did you read it? ${
-    this.status.toLowerCase().charAt(0).toUpperCase() + this.status.slice(1)
-  }.`;
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages}. Did you read it? ${
+      this.status.toLowerCase().charAt(0).toUpperCase() + this.status.slice(1)
+    }.`;
+  }
 };
 
 // Array to store the books
